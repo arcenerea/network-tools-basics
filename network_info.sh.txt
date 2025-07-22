@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "🔍 Información de red:"
+
+echo "📡 Dirección IP local:"
+ip addr show | grep 'inet ' | grep -v '127.0.0.1'
+
+echo "🌐 Servidores DNS:"
+cat /etc/resolv.conf | grep nameserver
+
+echo "🔌 Puertos abiertos (TCP/UDP):"
+ss -tuln
