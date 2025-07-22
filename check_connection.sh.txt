@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Lista de sitios a comprobar
+sitios=("google.com" "github.com" "cloudflare.com")
+
+echo "Verificando conectividad..."
+
+for sitio in "${sitios[@]}"; do
+    echo -n "Conectando con $sitio... "
+    if ping -c 1 -W 1 "$sitio" > /dev/null 2>&1; then
+        echo "✅ OK"
+    else
+        echo "❌ Fallo"
+    fi
+done
