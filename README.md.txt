@@ -10,4 +10,4 @@ Verifica si hay conexión con distintos sitios web (Google, GitHub, etc.) median
 
 ```bash
 ./check_connection.sh
-Más scripts en desarrollo: `network_info.sh`
+Más scripts en desarrollo
