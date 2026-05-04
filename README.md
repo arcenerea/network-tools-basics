@@ -1,14 +1,29 @@
+# 🌐 Network Tools — Bash Toolkit
+
+A collection of Bash scripts for network diagnostics, connectivity checks, port scanning and DNS resolution. Built for Linux systems administrators and DevOps engineers.
+
+Built and documented by [Nerea Arce](https://www.linkedin.com/in/nerea-arce/) · SysAdmin & DevOps Engineer
+
+---
+
+## Scripts
+
+| Script | Description |
+|--------|-------------|
+| `network_info.sh` | Network interfaces, IP addresses, gateway and DNS info |
+| `check_connection.sh` | Connectivity check, ping and latency measurement |
+| `port_scanner.sh` | TCP port scanning with configurable range |
+| `dns_lookup.sh` | DNS resolution, reverse lookup and diagnostics |
+
 ---
 
 ## Usage
 
 Clone the repository and give execution permissions:
 
-```bash
-git clone https://github.com/arcenerea/network-tools-basics
-cd network-tools-basics
-chmod +x scripts/*.sh
-```
+    git clone https://github.com/arcenerea/network-tools-basics
+    cd network-tools-basics
+    chmod +x scripts/*.sh
 
 ---
 
@@ -17,42 +32,31 @@ chmod +x scripts/*.sh
 ### network_info.sh
 Displays full network information: active interfaces, IP addresses, subnet masks, default gateway and configured DNS servers.
 
-```bash
-./scripts/network_info.sh
-```
+    ./scripts/network_info.sh
 
 ---
 
 ### check_connection.sh
-Tests connectivity to a target host or IP. Measures latency and packet loss. Useful for quick network troubleshooting.
+Tests connectivity to a target host or IP. Measures latency and packet loss.
 
-```bash
-./scripts/check_connection.sh 8.8.8.8
-./scripts/check_connection.sh google.com
-```
+    ./scripts/check_connection.sh 8.8.8.8
+    ./scripts/check_connection.sh google.com
 
 ---
 
 ### port_scanner.sh
 Scans TCP ports on a target host within a configurable range. Identifies open and closed ports.
 
-```bash
-./scripts/port_scanner.sh 192.168.1.1 1 1024
-```
+    ./scripts/port_scanner.sh 192.168.1.1 1 1024
 
-**Arguments:**
-- `$1` — target host or IP
-- `$2` — start port (default: 1)
-- `$3` — end port (default: 1024)
+Arguments: target host, start port, end port.
 
 ---
 
 ### dns_lookup.sh
-Performs DNS resolution, reverse lookup and nameserver queries for a given domain. Useful for DNS troubleshooting.
+Performs DNS resolution, reverse lookup and nameserver queries for a given domain.
 
-```bash
-./scripts/dns_lookup.sh google.com
-```
+    ./scripts/dns_lookup.sh google.com
 
 ---
 
